@@ -1,5 +1,4 @@
 import React from "react";
-// import hoodie from "../images/hoodie1.png"
 
 export default function Card(props) {
 

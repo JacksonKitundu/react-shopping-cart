@@ -106,6 +106,12 @@ export default function App() {
     setDarkMode(prevDark => !prevDark)
   }
   
+  React.useEffect(() => {
+    const body = document.querySelector('body')
+    body.style.backgroundColor = darkMode ? "#00000b" : ""
+    
+  }, [handleDarkMode])
+  
   return (
   <>
   < Header 

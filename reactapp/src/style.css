@@ -9,11 +9,12 @@ header {
   height: 10vh;
   width: 100vw;
   background-color: #f1f1f1;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, .1);
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: right;
   align-items: center;
   padding-right: 4rem;
+  z-index: 5000000;
 }
 
 .cart {
@@ -27,17 +28,13 @@ header {
   cursor: pointer;
 }
 
-.cart ::-webkit-scrollbar-track {
-  width: 5px;
-}
-
 .notCount {
   position: absolute;
   right: -5px;
   bottom: -5px;
   font-weight: bolder;
   z-index: 5000;
-  color: #492F88;
+  color: #492f88;
 }
 
 .cardImg {
@@ -54,14 +51,14 @@ header {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 5rem;
-  margin-right: 2rem;
   width: 180px;
   min-height: 350px;
   padding: 0 0 10px 0;
   border-radius: 10px;
 }
 
-.card h4, h5{
+.card h4,
+h5 {
   font-weight: 600;
 }
 
@@ -79,43 +76,54 @@ header {
   text-align: center;
   border: none;
   font-size: 1rem;
-  outline: solid #6745A3 2px;
+  outline: solid #6745a3 2px;
   border-radius: 50%;
-  color: #6745A3;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+  color: #6745a3;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in;
 }
 
 .cardContent button:hover {
   transform: scale(1.05);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, .1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .prodContainer {
-  display: flex;
+  display: grid;
   justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+  width: 55vw;
+  gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
 }
 
 .cartItemsContainer {
   display: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   flex-direction: column;
   align-items: center;
   position: absolute;
   right: 3rem;
   top: 3rem;
-  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
   max-height: 300px;
   width: 400px;
   padding: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
-  
-  background-color: #5A3C94;
+  background-color: #5a3c94;
 }
 
 .cartItemsContainer::-webkit-scrollbar {
   width: 5px;
+}
+
+.cartItemsContainer::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: white;
+  border-radius: 3px;
 }
 
 .cartItemsContainer.active {
@@ -129,8 +137,9 @@ header {
   min-height: 80px;
   max-height: 80px;
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   background-color: #cfb6f6;
+  border-left: 3px solid white;
 }
 
 .cartItem .imgDesc {
