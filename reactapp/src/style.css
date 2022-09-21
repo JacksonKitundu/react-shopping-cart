@@ -5,6 +5,10 @@
   font-family: "poppins";
 }
 
+body {
+  transition: .5s ease;
+}
+
 header {
   height: 10vh;
   width: 100vw;
@@ -46,6 +50,11 @@ header {
   /* background-color: #fdebe9; */
 }
 
+.cardImg.active {
+  background-color: #bbbbbb;
+  color: #12082a;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -55,6 +64,7 @@ header {
   min-height: 350px;
   padding: 0 0 10px 0;
   border-radius: 10px;
+  
 }
 
 .card h4,
