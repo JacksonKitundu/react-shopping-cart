@@ -7,12 +7,13 @@
 
 body {
   transition: .5s ease;
+  background-color: #f1f1f1;
 }
 
 header {
   height: 10vh;
   width: 100vw;
-  background-color: #f1f1f1;
+  background-color: white;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: right;
@@ -47,12 +48,11 @@ header {
   min-height: 85%;
   object-fit: cover;
   border-radius: 10px;
-  /* background-color: #fdebe9; */
 }
 
 .cardImg.active {
   background-color: #bbbbbb;
-  color: #12082a;
+  color: #ffffff;
 }
 
 .card {
@@ -64,11 +64,9 @@ header {
   min-height: 350px;
   padding: 0 0 10px 0;
   border-radius: 10px;
-  
 }
 
-.card h4,
-h5 {
+.card h4 {
   font-weight: 600;
 }
 
@@ -96,6 +94,23 @@ h5 {
 .cardContent button:hover {
   transform: scale(1.05);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.amount {
+  font-size: 16px;
+}
+
+.prodName{
+  font-weight: 400;
+}
+
+.prodQtt {
+  font-size: 13px;
+  color: #eaeaea;
+}
+
+.prodPrice {
+  font-size: 12px;
 }
 
 .prodContainer {
@@ -173,7 +188,6 @@ h5 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: white; */
   border-radius: 5px;
   padding: 3px 10px 3px 0px;
 }
@@ -198,4 +212,57 @@ h5 {
 
 .cartItem .btnAdd button:hover {
   background-color: #eee;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 680px) {
+  .card {
+    margin-top: 10px;
+    width: 150px;
+    min-height: 250px;
+    max-height: 250px;
+    padding: 0 0 10px 0;
+    border-radius: 10px;
+  }
+
+  .prodContainer {
+    width: 100vw;
+    padding: 10px;
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  }
+
+  .cardContent button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .cartItemsContainer {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    border-radius: 10px 0px 0px 10px;
+    max-height: 300px;
+    width: 300px;
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .cartItem {
+    min-height: 80px;
+    max-height: 80px;
+    margin: 5px;
+  }
+
+  .cartItem .btnAdd {
+    padding: 10px 10px 10px 0px;
+  }
+
+  .cartItem .btnAdd button {
+    width: 100%;
+    padding: 0 8px 0 8px;
+    height: 100%;
+  }
 }

@@ -3,7 +3,7 @@ export default [
     "id": 1,
     "prodName": "shirt pink",
     "category": "shirts",
-    "price": "tsh 12000",
+    "price": "12000",
     "image": "../images/shirtPink1.png",
     "fav": false,
     "quantity": 0
@@ -13,7 +13,7 @@ export default [
     "prodName": "hoodie purple",
     "category": "hoodie",
     "image": "../images/hoodie1.png",
-    "price": "tsh 20000",
+    "price": "20000",
     "fav": false,
     "quantity": 0
   },
@@ -22,7 +22,7 @@ export default [
     "prodName": "short pink",
     "category": "shorts",
     "image": "../images/shorts1.png",
-    "price": "tsh 10000",
+    "price": "10000",
     "fav": false,
     "quantity": 0
   },
@@ -31,7 +31,7 @@ export default [
     "prodName": "pant purple",
     "category": "pants",
     "image": "../images/pantsPurple1.png",
-    "price": "tsh 30000",
+    "price": "30000",
     "fav": false,
     "quantity": 0
   }

@@ -6,7 +6,7 @@ import Header from "./Header";
 
 export default function App() {
   const [prod, setProd] = React.useState(data);
-  const [cartItems, setCartItems] = React.useState([]);
+  const [cartItems, setCartItems] = React.useState(() => JSON.parse(localStorage.getItem("cartItems") || []));
   const [darkMode, setDarkMode] = React.useState(false);
 
   //Add item to cart
@@ -77,7 +77,7 @@ export default function App() {
   function decreaseCount(id) {
     setCartItems((oldItems) =>
       oldItems.map((item) => {
-        if (item.quantity > 0) {
+        if (item.quantity > 1) {
           return item.id === id
             ? { ...item, quantity: item.quantity - 1 }
             : item;
@@ -129,6 +129,15 @@ export default function App() {
     backgroundColor: darkMode ? "#00000b" : "",
   };
 
+  const styleCartTitle = {
+    color: darkMode ? "#f1f1f1" : "#202124"
+  }
+
+  //Store items in cart into localStorage
+  React.useEffect(() =>{
+    localStorage.setItem("cartItems", JSON.stringify(cartItems))
+  },[cartItems])
+
   return (
     <>
       <Header
@@ -138,6 +147,7 @@ export default function App() {
         darkStatus={darkMode}
       />
       <div style={styleCartItem} className="cartItemsContainer">
+      <h3 style={styleCartTitle}>My cart</h3>
         {itemsInCart}
       </div>
       <div className="prodContainer">{products}</div>
