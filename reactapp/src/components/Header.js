@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header(props) {
   const darkStyleHeader = {
-    backgroundColor: props.darkStatus ? "#00000b" : "",
+    backgroundColor: props.darkStatus ? "#130129" : "",
     color : props.darkStatus ? "#f1f1f1" : ""
   }
   const cartStyle = {
@@ -10,7 +10,7 @@ export default function Header(props) {
   }
   return (
     <header style={darkStyleHeader}>
-      <i onClick={props.handleDarkMode} class="fa fa-moon-o" aria-hidden="true">M</i>
+      <i onClick={props.handleDarkMode} class="fa fa-moon-o" aria-hidden="true"></i>
       <div className="cartNotification">
         <div onClick={props.handleCatOpen} className="cart">
           <i class="fa-solid fa-cart-shopping"></i> 

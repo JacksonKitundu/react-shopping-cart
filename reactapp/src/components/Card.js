@@ -4,7 +4,7 @@ export default function Card(props) {
    function changeStyle() {
      let style
     if (props.darkStatus) {
-      return style = {backgroundColor: "#00000b"}
+      return style = {backgroundColor: "#130129"}
     }else {
       return style = {
         backgroundColor:
@@ -21,17 +21,20 @@ export default function Card(props) {
     }
   }
 
-  const namePriceStyle = {
-    color: props.darkStatus ? "#f1f1f1" : "",
+  const stylePrice = {
+    color: props.darkStatus ? "#f1f1f1" : "#171717",
+  };
+  const styleTitle = {
+    color: props.darkStatus ? "#f1f1f1" : "#040404",
   };
 
   return (
     <div className="card">
       <img style={changeStyle()} className="cardImg" src={props.image} alt="" />
       <div className="cardContent">
-        <div style={namePriceStyle} className="namePrice">
-          <h4>{props.price}</h4>
-          <h5>{props.prodName}</h5>
+        <div className="namePrice">
+          <h4 style={stylePrice}>Tsh {props.price}</h4>
+          <p style={styleTitle}>{props.prodName}</p>
         </div>
         <div className="btnAdd">
           <button onClick={props.addToCart}>+</button>
