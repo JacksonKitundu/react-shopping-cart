@@ -8,6 +8,7 @@ export default function Header(props) {
   const cartStyle = {
     color: props.darkStatus ? "#f1f1f1" : ""
   }
+  
   return (
     <header style={darkStyleHeader}>
       <i onClick={props.handleDarkMode} class="fa fa-moon-o" aria-hidden="true"></i>
