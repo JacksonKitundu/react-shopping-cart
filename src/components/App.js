@@ -138,6 +138,11 @@ export default function App() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems))
   },[cartItems])
 
+  //Confirmation animation
+  function ani() {
+    
+  }
+
   return (
     <>
       <Header

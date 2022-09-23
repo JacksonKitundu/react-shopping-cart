@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header(props) {
   const darkStyleHeader = {
-    backgroundColor: props.darkStatus ? "#130129" : "",
+    backgroundColor: props.darkStatus ? "#11131B" : "",
     color : props.darkStatus ? "#f1f1f1" : ""
   }
   const cartStyle = {
