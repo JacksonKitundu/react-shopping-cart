@@ -4,7 +4,7 @@ export default function Card(props) {
    function changeStyle() {
      let style
     if (props.darkStatus) {
-      return style = {backgroundColor: "#130129"}
+      return style = {backgroundColor: "#11131B"}
     }else {
       return style = {
         backgroundColor:

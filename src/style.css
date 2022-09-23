@@ -7,14 +7,15 @@
 
 body {
   transition: .5s ease;
-  background-color: #f1f1f1;
+  background-color: rgb(249, 249, 249);
 }
 
 header {
   height: 10vh;
   width: 100vw;
   background-color: white;
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1); */
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.051);
   display: flex;
   justify-content: right;
   align-items: center;
