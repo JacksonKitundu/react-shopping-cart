@@ -6,7 +6,7 @@ import Header from "./Header";
 
 export default function App() {
   const [prod, setProd] = React.useState(data);
-  const [cartItems, setCartItems] = React.useState(JSON.parse(localStorage.getItem("cartItems") || []));
+  const [cartItems, setCartItems] = React.useState(JSON.parse(localStorage.getItem("cartItems")) || []);
   const [darkMode, setDarkMode] = React.useState(false);
 
   //Add item to cart
