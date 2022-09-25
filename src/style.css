@@ -68,7 +68,13 @@ header {
 }
 
 .card h4 {
+  margin-top: 5px;
   font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: #1a2033;
 }
 
 .cardContent {
@@ -175,7 +181,8 @@ header {
 
 .cartItem img {
   width: 50px;
-  height: auto;
+  height: 50px;
+  object-fit: cover;
 }
 
 .cartItem .desc {
